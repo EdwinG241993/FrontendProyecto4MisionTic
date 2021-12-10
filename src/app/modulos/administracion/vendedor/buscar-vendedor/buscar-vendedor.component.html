@@ -1,1 +1,62 @@
-<p>buscar-vendedor works!</p>
+<br>
+<h3>Modulo de Vendedor</h3>
+<br>
+<a routerLink="/administracion/crear-vendedor" class="btn">Nuevo Vendedor</a>
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>
+                Nombres
+            </th>
+            <th>
+                Apellidos
+            </th>
+            <th>
+                Direccion
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Tel Fijo
+            </th>
+            <th>
+                Tel Movil
+            </th>
+            <th>
+                Edicion
+            </th>
+            <th>
+                Eliminacion
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let v of listadoRegistros">
+            <td>
+                {{v.nombres}}
+            </td>
+            <td>
+                {{v.apellidos}}
+            </td>
+            <td>
+                {{v.direccion}}
+            </td>
+            <td>
+                {{v.correoElec}}
+            </td>
+            <td>
+                {{v.telFijo}}
+            </td>
+            <td>
+                {{v.telMovil}}
+            </td>
+            <td>
+                <a routerLink="/administracion/editar-vendedor/{{v.idVendedor}}" class="btn">Editar</a>
+            </td>
+            <td>
+                <a routerLink="/administracion/eliminar-vendedor/{{v.idVendedor}}" class="btn btn-danger">Eliminar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

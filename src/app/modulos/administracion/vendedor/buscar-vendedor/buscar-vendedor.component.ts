@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ModeloVendedor } from 'src/app/modelos/vendedor.modelo';
+import { AdministradorService } from 'src/app/servicios/administrador.service';
+import { VendedorService } from 'src/app/servicios/vendedor.service';
 
 @Component({
   selector: 'app-buscar-vendedor',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarVendedorComponent implements OnInit {
 
-  constructor() { }
+  listadoRegistros: ModeloVendedor[] = [];
+
+  constructor(private vendedorServicio: VendedorService) { }
 
   ngOnInit(): void {
+    this.ObtenerListadoVendedor();
+  }
+
+  ObtenerListadoVendedor() {
+    this.vendedorServicio.ObtenerVendedor().subscribe((datos: ModeloVendedor[]) => {
+      this.listadoRegistros = datos;
+    })
   }
 
 }
