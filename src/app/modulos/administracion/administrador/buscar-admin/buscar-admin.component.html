@@ -1,0 +1,59 @@
+<a routerLink="/administracion/crear-admin" class="btn">Nuevo Admin</a>
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>
+                Nombres
+            </th>
+            <th>
+                Apellidos
+            </th>
+            <th>
+                Direccion
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Tel Fijo
+            </th>
+            <th>
+                Tel Movil
+            </th>
+            <th>
+                Edicion
+            </th>
+            <th>
+                Eliminacion
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of listadoRegistros">
+            <td>
+                {{a.nombres}}
+            </td>
+            <td>
+                {{a.apellidos}}
+            </td>
+            <td>
+                {{a.direccion}}
+            </td>
+            <td>
+                {{a.correoElec}}
+            </td>
+            <td>
+                {{a.telFijo}}
+            </td>
+            <td>
+                {{a.telMovil}}
+            </td>
+            <td>
+                <a routerLink="/administracion/editar-admin/{{a.idAdministrador}}" class="btn">Editar Administrador</a>
+            </td>
+            <td>
+                <a routerLink="/administracion/eliminar-admin/{{a.idAdministrador}}" class="btn btn-danger">Eliminar Administrador</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

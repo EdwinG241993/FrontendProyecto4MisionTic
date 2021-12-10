@@ -1,0 +1,40 @@
+<div class="row">
+  <h3>Crear un Admnistrador</h3>
+    <form [formGroup]="fgValidador" (ngSubmit)="GuardarAdmin()" method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input formControlName="nombres" placeholder="" type="text" class="validate">
+          <label for="nombres">Nombres</label>
+        </div>
+        <div class="input-field col s6">
+          <input formControlName="apellidos" type="text" class="validate">
+          <label for="apellidos">Apellidos</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="direccion"  type="text" class="validate">
+          <label for="direccion">Direccion</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="correoElec" type="email" class="validate">
+          <label for="correoElec">Email</label>
+        </div>
+      </div>
+      <div class="input-field col s6">
+        <input formControlName="telFijo" placeholder="" type="text" class="validate">
+        <label for="telFijo">Tel Fijo</label>
+      </div>
+      <div class="input-field col s6">
+        <input formControlName="telMovil" placeholder="" type="text" class="validate">
+        <label for="telMovil">Tel Movil</label>
+      </div>
+      <p class="center-aling">
+
+      </p>
+      <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn-large" type="submit"><i 
+        class="material-icons right">send</i>Guardar</button>
+    </form>
+  </div>
