@@ -18,7 +18,12 @@ export class EliminarAdminComponent implements OnInit {
      }
 
   ngOnInit(): void {
-    this.EliminarAdmin();
+    let confirmacion = confirm("¿De verdad desea eliminar el administrador?");
+    if(confirmacion){
+      this.EliminarAdmin();
+    }else{
+      this.router.navigate(["administracion/listar-admin"]);
+    }
   }
 
   EliminarAdmin(){

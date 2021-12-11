@@ -1,1 +1,45 @@
-<p>editar-producto works!</p>
+<div class="row">
+    <h3>Editar un Producto</h3>
+    <form [formGroup]="fgValidador" (ngSubmit)="EditarProducto()" method="POST" class="col s12">
+        <input type="hidden" formControlName="idProducto"/>
+      <div class="row">
+        <div class="input-field col s6">
+          <input formControlName="nombre" placeholder="" type="text" class="validate">
+          <label for="nombre" class="active">Nombre</label>
+        </div>
+        <div class="input-field col s6">
+          <input formControlName="descripcion" type="text" class="validate">
+          <label for="descripcion" class="active">Descripcion</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="precio" type="text" class="validate">
+          <label for="precio" class="active">Precio</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="existencias" type="text" class="validate">
+          <label for="existencias" class="active">Existencias</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="disponible" type="text" class="validate">
+          <label for="disponible" class="active">Disponible</label>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="imagen" type="text" class="validate">
+          <label for="imagen" class="active">Imagen</label>
+        </div>
+      </div>
+      <p>
+        <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn-large" type="submit"><i
+            class="material-icons right">send</i>Actualizar</button>
+      </p>
+    </form>
+  </div>

@@ -21,6 +21,8 @@ export class EliminarVendedorComponent implements OnInit {
     let confirmacion = confirm("¿De verdad desea eliminar el vendedor?");
     if(confirmacion){
       this.EliminarVendedor();
+    }else{
+      this.router.navigate(["administracion/listar-vendedor"]);
     }
   }
 

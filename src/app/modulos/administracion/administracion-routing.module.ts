@@ -5,6 +5,9 @@ import { CrearAdminComponent } from './administrador/crear-admin/crear-admin.com
 import { EditarAdminComponent } from './administrador/editar-admin/editar-admin.component';
 import { EliminarAdminComponent } from './administrador/eliminar-admin/eliminar-admin.component';
 import { BuscarProductoComponent } from './producto/buscar-producto/buscar-producto.component';
+import { CrearProductoComponent } from './producto/crear-producto/crear-producto.component';
+import { EditarProductoComponent } from './producto/editar-producto/editar-producto.component';
+import { EliminarProductoComponent } from './producto/eliminar-producto/eliminar-producto.component';
 import { BuscarVendedorComponent } from './vendedor/buscar-vendedor/buscar-vendedor.component';
 import { CrearVendedorComponent } from './vendedor/crear-vendedor/crear-vendedor.component';
 import { EditarVendedorComponent } from './vendedor/editar-vendedor/editar-vendedor.component';
@@ -54,6 +57,28 @@ const routes: Routes = [
   {
     path: 'eliminar-vendedor/:idVendedor',
     component: EliminarVendedorComponent
+  },
+
+  //Rutas Producto
+  {
+    path: 'crear-producto',
+    component: CrearProductoComponent
+  },
+  {
+    path: 'editar-producto/:idProducto',
+    component: EditarProductoComponent
+  },
+  {
+    path: 'listar-producto',
+    component: BuscarProductoComponent
+  },
+  {
+    path: 'buscar-producto',
+    component: BuscarProductoComponent
+  },
+  {
+    path: 'eliminar-producto/:idProducto',
+    component: EliminarProductoComponent
   }
 ];
 
