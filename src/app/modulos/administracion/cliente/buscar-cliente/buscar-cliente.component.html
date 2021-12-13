@@ -1,1 +1,43 @@
-<p>buscar-cliente works!</p>
+<br>
+<h3>Modulo de Clientes</h3>
+<br>
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>
+                Nombres
+            </th>
+            <th>
+                Apellidos
+            </th>
+            <th>
+                Direccion
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Telefono
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of listadoRegistros">
+            <td>
+                {{c.nombres}}
+            </td>
+            <td>
+                {{c.apellidos}}
+            </td>
+            <td>
+                {{c.direccion}}
+            </td>
+            <td>
+                {{c.correoElec}}
+            </td>
+            <td>
+                {{c.telefono}}
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -2,7 +2,7 @@
     <div class="row">
         <h2 class="center-align">Iniciar Sesion</h2>
         <div class="row">
-            <form class="col s12" [formGroup]="fgValidador" (ngSubmit)="IdentificarAdministrador()">
+            <form class="col s12" [formGroup]="fgValidador" (ngSubmit)="IdentificarUsuario()">
                 <div class="row">
                     <div class="input-field col s12">
                         <input formControlName="usuario" id="email" type="email" class="validate">
@@ -16,11 +16,12 @@
                     </div>
                 </div>
                 <div class="divider"></div>
+                <div><a routerLink="/administracion/crear-cliente">Registrarse</a></div>
                 <div class="row">
                     <div class="col m12">
                         <p class="right-align">
-                            <button [disabled]="!fgValidador.valid" class="btn btn-large waves-effect waves-light" type="submit" name="action">Iniciar
-                                Sesion</button>
+                            <button [disabled]="!fgValidador.valid" class="btn btn-large waves-effect waves-light"
+                                type="submit" name="action">Iniciar Sesion</button>
                         </p>
                     </div>
                 </div>

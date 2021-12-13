@@ -23,7 +23,7 @@ export class IdentificacionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  IdentificarAdministrador() {
+  IdentificarUsuario() {
     let usuario = this.fgValidador.controls["usuario"].value;
     let clave = this.fgValidador.controls["clave"].value;
 

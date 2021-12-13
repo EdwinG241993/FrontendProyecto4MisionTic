@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ModeloVendedor } from 'src/app/modelos/vendedor.modelo';
-import { AdministradorService } from 'src/app/servicios/administrador.service';
 import { VendedorService } from 'src/app/servicios/vendedor.service';
 
 @Component({
